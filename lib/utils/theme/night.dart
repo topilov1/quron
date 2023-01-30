@@ -26,7 +26,7 @@ ThemeData nightTheme = ThemeData(
   shadowColor: AppColorsNight.shadow,
   colorScheme: ColorScheme.dark(background: AppColorsNight.background),
   appBarTheme: AppBarTheme(backgroundColor: AppColorsNight.background),
-  iconTheme: IconThemeData(color: AppColorsNight.oyatInfoText),
+  iconTheme: IconThemeData(color: AppColorsNight.text),
   cardColor: AppColorsNight.infoCard,
   textTheme: _darkTextTheme(),
 );

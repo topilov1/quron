@@ -7,8 +7,8 @@ import '../../utils/images/app_images.dart';
 // ignore: must_be_immutable
 class HomeBigCard extends StatelessWidget {
   String sura;
-  String ayat;
-  HomeBigCard({super.key, required this.sura, required this.ayat});
+  String verse;
+  HomeBigCard({super.key, required this.sura, required this.verse});
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +25,7 @@ class HomeBigCard extends StatelessWidget {
       ),
       child: Stack(
         children: [
+          // image Positioned
           Positioned(
             left: 140.0,
             bottom: -55.0,
@@ -34,12 +35,10 @@ class HomeBigCard extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15.0).r,
               ),
-              child: Image.asset(
-                AppImages.cardBackground2,
-                fit: BoxFit.contain,
-              ),
+              child: Image.asset(AppImages.cardBackground2),
             ),
           ),
+
           Container(
             height: 180.h,
             width: double.infinity,
@@ -66,7 +65,7 @@ class HomeBigCard extends StatelessWidget {
                       size: 20.0.sp,
                     ),
                     SizedBox(width: 10.0.w),
-                    BigCardTextWidgets.smalltext(text: "Last reod:"),
+                    BigCardTextWidgets.smalltext(text: "Oxirgi o'qilgani : "),
                   ],
                 ),
                 SizedBox(height: 45.0.h),
@@ -80,7 +79,7 @@ class HomeBigCard extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 10.0.h),
-                BigCardTextWidgets.smalltext(text: ayat),
+                BigCardTextWidgets.smalltext(text: verse),
               ],
             ),
           ),
@@ -125,7 +124,7 @@ class InfoCard extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 100.0.w,
+        height: 100.0.h,
         width: double.infinity,
         margin: const EdgeInsets.only(
           top: 30.0,

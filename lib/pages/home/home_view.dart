@@ -20,16 +20,16 @@ class HomeView extends GetView<HomeController> {
       drawer: const HomeDrawer(),
       body: Column(
         children: [
-          HomeBigCard(sura: "AL - Faatiha", ayat: 'Ayat NO: 3'),
+          HomeBigCard(sura: "AL - Fotiha", verse: 'oyat No: 3'),
           Expanded(
             child: ListView.builder(
               itemCount: 114,
               itemBuilder: (context, index) {
                 return InfoCard(
-                  ayah: "7 Ayah",
+                  ayah: "7 - oyat",
                   index: index + 1,
-                  address: "Meccan",
-                  name: "AL - Faatiha",
+                  address: "Makka",
+                  name: "AL - Fotiha",
                   onTap: () {
                     Get.toNamed(Routes.suraViwe, arguments: [index]);
                   },

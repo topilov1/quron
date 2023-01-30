@@ -24,25 +24,28 @@ class HomeDrawer extends GetView<HomeController> {
             child: Row(
               children: [
                 GetBuilder<HomeController>(
-                    init: controller,
-                    builder: (_) {
-                      return themeButton(
-                        icon: Icons.dark_mode_outlined,
-                        color: Colors.white,
-                        onTap: () {
-                          controller.changeAppTheme(context);
-                        },
-                      );
-                    }),
+                  init: controller,
+                  builder: (_) {
+                    return themeButton(
+                      icon: Icons.dark_mode_outlined,
+                      color: Colors.white,
+                      onTap: () {
+                        controller.changeAppTheme(context);
+                      },
+                    );
+                  },
+                ),
+                SizedBox(width: 20.0.w),
                 GetBuilder<HomeController>(
                   init: controller,
                   builder: (_) {
                     return themeButton(
-                        icon: Icons.light_mode_outlined,
-                        color: Colors.black,
-                        onTap: () {
-                          controller.changeAppTheme(context);
-                        });
+                      icon: Icons.light_mode_outlined,
+                      color: Colors.black,
+                      onTap: () {
+                        controller.changeAppTheme(context);
+                      },
+                    );
                   },
                 )
               ],
@@ -72,7 +75,7 @@ Expanded themeButton({
         ),
         child: Icon(
           icon,
-          color: Colors.grey[700],
+          color: Colors.grey[600],
         ),
       ),
     ),
