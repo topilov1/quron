@@ -9,22 +9,24 @@ TextTheme? _lightTextTheme() => TextTheme(
         color: AppColorsLight.text,
         fontWeight: FontWeight.w600,
       ),
-      titleMedium: TextStyle(
-        fontSize: 16.sp,
+      titleSmall: TextStyle(
+        fontSize: 17.sp,
+        fontFamily: 'Roboto-Regular',
+        color: AppColorsLight.text,
         fontWeight: FontWeight.w600,
-        color: Colors.black,
       ),
       bodyMedium: TextStyle(
         fontSize: 25.sp,
         fontWeight: FontWeight.w600,
-        color: Colors.black,
+        color: AppColorsLight.text,
       ),
     );
 
 ThemeData lightTheme = ThemeData(
-  primaryColor: Colors.white,
+  shadowColor: AppColorsLight.shadow,
   colorScheme: ColorScheme.light(background: AppColorsLight.background),
   appBarTheme: AppBarTheme(backgroundColor: AppColorsLight.background),
   iconTheme: IconThemeData(color: AppColorsLight.text),
+  cardColor: AppColorsLight.infoCard,
   textTheme: _lightTextTheme(),
 );

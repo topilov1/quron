@@ -32,7 +32,7 @@ class AppThemeProviderView extends StatelessWidget with AppRoutes {
             debugShowCheckedModeBanner: false,
             defaultTransition: Transition.native,
             initialBinding: MainBinding(),
-            initialRoute: Routes.home,
+            initialRoute: Routes.homeView,
           ),
         ),
       ),

@@ -1,3 +1,4 @@
 class Routes {
-  static const home = '/home';
+  static const homeView = '/home';
+  static const suraViwe = '/sura';
 }

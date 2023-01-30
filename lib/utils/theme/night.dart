@@ -6,26 +6,27 @@ TextTheme? _darkTextTheme() => TextTheme(
       titleLarge: TextStyle(
         fontSize: 20.sp,
         fontFamily: 'Roboto-Regular',
-        color: AppColorsLight.oyatInfoText,
+        color: AppColorsNight.text,
         fontWeight: FontWeight.w600,
       ),
-      titleMedium: TextStyle(
-        fontSize: 16.sp,
+      titleSmall: TextStyle(
+        fontSize: 17.sp,
+        fontFamily: 'Roboto-Regular',
+        color: AppColorsNight.text,
         fontWeight: FontWeight.w600,
-        color: Colors.white,
       ),
       bodyMedium: TextStyle(
         fontSize: 25.sp,
         fontWeight: FontWeight.w600,
-        color: Colors.white,
+        color: AppColorsNight.text,
       ),
     );
 
 ThemeData nightTheme = ThemeData(
-  bottomAppBarTheme: const BottomAppBarTheme(color: Colors.black),
-  primaryColor: Colors.black,
-  appBarTheme: AppBarTheme(backgroundColor: AppColorsNight.background),
+  shadowColor: AppColorsNight.shadow,
   colorScheme: ColorScheme.dark(background: AppColorsNight.background),
+  appBarTheme: AppBarTheme(backgroundColor: AppColorsNight.background),
   iconTheme: IconThemeData(color: AppColorsNight.oyatInfoText),
+  cardColor: AppColorsNight.infoCard,
   textTheme: _darkTextTheme(),
 );
